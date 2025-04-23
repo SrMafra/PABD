@@ -1,0 +1,11 @@
+﻿namespace GerirAluguel.Models
+{
+    public class Despesa
+    {
+        public int IdDespesa { get; set; }
+        public string? DescricaoDespesa { get; set; }
+        public decimal? ValorDespesa { get; set; }
+
+        public ICollection<ImovelDespesa>? ImovelDespesas { get; set; }
+    }
+}
