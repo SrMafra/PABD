@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerirAluguel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56eb206022054451214d8d4ea80b2711ba22a5f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerirAluguel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerirAluguel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

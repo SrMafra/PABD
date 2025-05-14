@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "GerirAluguel.Controllers.InquilinoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Inquilino",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.InquilinoController",
+    "Method": "Post",
+    "RelativePath": "api/Inquilino",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GerirAluguel.DTO.InquilinoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.InquilinoController",
+    "Method": "GetOne",
+    "RelativePath": "api/Inquilino/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.InquilinoController",
+    "Method": "Put",
+    "RelativePath": "api/Inquilino/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "GerirAluguel.DTO.InquilinoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.InquilinoController",
+    "Method": "Delete",
+    "RelativePath": "api/Inquilino/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GerirAluguel.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
