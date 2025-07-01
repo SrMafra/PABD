@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
     "Method": "GetAll",
-    "RelativePath": "api/Imovel",
+    "RelativePath": "api/Imoveis",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,25 +10,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
     "Method": "Post",
-    "RelativePath": "api/Imovel",
+    "RelativePath": "api/Imoveis",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "GerirAluguel.DTO.ImovelDto",
+        "Type": "GerirAluguel.DTO.ImoveisDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
     "Method": "GetOne",
-    "RelativePath": "api/Imovel/{id}",
+    "RelativePath": "api/Imoveis/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
     "Method": "Put",
-    "RelativePath": "api/Imovel/{id}",
+    "RelativePath": "api/Imoveis/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -56,16 +56,16 @@
       },
       {
         "Name": "dto",
-        "Type": "GerirAluguel.DTO.ImovelDto",
+        "Type": "GerirAluguel.DTO.ImoveisDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
     "Method": "Delete",
-    "RelativePath": "api/Imovel/{id}",
+    "RelativePath": "api/Imoveis/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

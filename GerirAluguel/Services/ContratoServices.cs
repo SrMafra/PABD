@@ -20,14 +20,14 @@ namespace GerirAluguel.Services
         public async Task<Contrato?> GetOneById(int id)
         {
            /*return await _context.Contratos.FindAsync(id);*/
-           return await _context.Contratos.Include(c=>c.IdInquilino).Include(c=>c.IdImovel).FirstOrDefaultAsync(c=>c.IdContrato ==id);
+           return await _context.Contratos.Include(c=>c.InquilinoId).Include(c=>c.ImovelId).FirstOrDefaultAsync(c=>c.ContratoId == id);
         }
         public async Task<Contrato?> Create(ContratoDto dto)
         {
             var Contrato = new Contrato
             {
-                IdInquilino = dto.IdInquilino,
-                IdImovel = dto.IdImovel,
+                InquilinoId = dto.InquilinoId,
+                ImovelId = dto.ImovelId,
                 DataInicio = dto.DataInicio,
                 DataFim = dto.DataFim,
                 ValorMensal = dto.ValorMensal,
@@ -43,8 +43,8 @@ namespace GerirAluguel.Services
             if (Contrato == null)
                 return null;
 
-            Contrato.IdInquilino = dto.IdInquilino;
-            Contrato.IdImovel = dto.IdImovel;
+            Contrato.InquilinoId = dto.InquilinoId;
+            Contrato.ImovelId = dto.ImovelId;
             Contrato.DataInicio = dto.DataInicio;
             Contrato.DataFim = dto.DataFim;
             Contrato.ValorMensal = dto.ValorMensal;

@@ -2,7 +2,7 @@
 {
     public class Despesa
     {
-        public int IdDespesa { get; set; }
+        public int DespesaId { get; set; }
         public string? DescricaoDespesa { get; set; }
         public decimal? ValorDespesa { get; set; }
 

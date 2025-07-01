@@ -2,10 +2,10 @@
 {
     public class ImovelDespesa
     {
-        public int IdImovel { get; set; }
-        public Imovel? Imovel { get; set; }
+        public int ImovelId { get; set; }
+        public Imoveis? Imoveis { get; set; }
 
-        public int? IdDespesa { get; set; }
+        public int? DespesaId{ get; set; }
         public Despesa? Despesa { get; set; }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using GerirAluguel.Data;
 using GerirAluguel.Models;
-using GerirAluguel.DTO;
+using GerirAluguel.DTO; 
 using Microsoft.EntityFrameworkCore;
+
 
 namespace GerirAluguel.Services
 {
@@ -9,59 +10,111 @@ namespace GerirAluguel.Services
     {
         private readonly AppDbContext _context;
 
-        public ImovelServices (AppDbContext context)
+        public ImovelServices(AppDbContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Imovel>> GetAll()
-        {
-            return await _context.Imoveis.ToListAsync();
-        }
-        public async Task<Imovel?> GetOneById(int id)
-        {
-            return await _context.Imoveis.FindAsync(id);
 
-        }
-        public async Task<Imovel?> Create(ImovelDto dto)
+      
+        public async Task<IEnumerable<ImoveisDto>> GetAll()
         {
-            var Imovel = new Imovel
+            var Imovel = await _context.Imoveis.ToListAsync();
+            
+            return Imovel.Select(i => new ImoveisDto
             {
+                ImovelId = i.ImovelId, 
+                DescricaoImovel = i.DescricaoImovel,
+                Endereco = i.Endereco,
+                ValorAluguel = i.ValorAluguel,
+                Status = i.Status
+            });
+        }
+
+ 
+        public async Task<ImoveisDto?> GetOneById(int id)
+        {
+           
+            var imovel = await _context.Imoveis.FindAsync(id);
+            if (imovel == null)
+            {
+                return null;
+            }
+            
+            return new ImoveisDto
+            {
+                ImovelId = imovel.ImovelId, 
+                DescricaoImovel = imovel.DescricaoImovel,
+                Endereco = imovel.Endereco,
+                ValorAluguel = imovel.ValorAluguel,
+                Status = imovel.Status
+            };
+        }
+
+        
+        public async Task<ImoveisDto> Create(ImoveisDto dto)
+        {
+           
+            var imovel = new Imoveis
+            {
+               
                 DescricaoImovel = dto.DescricaoImovel,
                 Endereco = dto.Endereco,
                 ValorAluguel = dto.ValorAluguel,
-                Status = dto.Status,
+                Status = dto.Status ?? "DISPONÍVEL", 
             };
 
-            _context.Imoveis.Add(Imovel);
+            _context.Imoveis.Add(imovel);
             await _context.SaveChangesAsync();
 
-            return Imovel;
+            
+            return new ImoveisDto
+            {
+                ImovelId = imovel.ImovelId,
+                DescricaoImovel = imovel.DescricaoImovel,
+                Endereco = imovel.Endereco,
+                ValorAluguel = imovel.ValorAluguel,
+                Status = imovel.Status
+            };
         }
 
-        public async Task<Imovel?> Update(int id, ImovelDto dto)
+
+        public async Task<ImoveisDto?> Update(int id, ImoveisDto dto)
         {
-            var Imovel = await _context.Imoveis.FindAsync(id);
+            var imovel = await _context.Imoveis.FindAsync(id);
 
-            if (Imovel == null)
-                return null;
+            if (imovel == null)
+            {
+                return null; 
+            }
 
-            Imovel.DescricaoImovel = dto.DescricaoImovel;
-            Imovel.Endereco = dto.Endereco;
-            Imovel.ValorAluguel = dto.ValorAluguel;
-            Imovel.Status = dto.Status;
+           
+            imovel.DescricaoImovel = dto.DescricaoImovel;
+            imovel.Endereco = dto.Endereco;
+            imovel.ValorAluguel = dto.ValorAluguel;
+            imovel.Status = dto.Status ?? imovel.Status; 
 
             await _context.SaveChangesAsync();
-            return Imovel;
+
+            
+            return new ImoveisDto
+            {
+                ImovelId = imovel.ImovelId,
+                DescricaoImovel = imovel.DescricaoImovel,
+                Endereco = imovel.Endereco,
+                ValorAluguel = imovel.ValorAluguel,
+                Status = imovel.Status
+            };
         }
 
+        
         public async Task<bool> Delete(int id)
         {
-            var Imovel = await _context.Imoveis.FindAsync(id);
+            var imovel = await _context.Imoveis.FindAsync(id);
 
-            if (Imovel == null)
+            if (imovel == null)
                 return false;
 
-            _context.Imoveis.Remove(Imovel);
+            _context.Imoveis.Remove(imovel);
             await _context.SaveChangesAsync();
             return true;
         }

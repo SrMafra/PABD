@@ -2,7 +2,7 @@
 {
     public class Inquilino
     {
-        public int IdInquilino { get; set; }
+        public int InquilinoId { get; set; }
         public string? Nome { get; set; }
         public string? Cpf { get; set; }
         public string? Email { get; set; }

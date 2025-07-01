@@ -2,10 +2,10 @@
 {
     public class ImovelCaracteristica
     {
-        public int IdImovel { get; set; }
-        public Imovel? Imovel { get; set; }
+        public int ImovelId { get; set; }
+        public Imoveis? Imoveis { get; set; }
 
-        public int? IdCaracteristica { get; set; }
+        public int? CaracteristicaId { get; set; }
         public Caracteristica? Caracteristica { get; set; }
     }
 }

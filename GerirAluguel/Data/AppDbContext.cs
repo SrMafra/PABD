@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using GerirAluguel.Models;
-using System.Collections.Generic;
-using System.Reflection.Emit;
+
 
 namespace GerirAluguel.Data
 {
@@ -12,7 +11,7 @@ namespace GerirAluguel.Data
         }
 
         public DbSet<Inquilino> Inquilinos { get; set; }
-        public DbSet<Imovel> Imoveis { get; set; }
+        public DbSet<Imoveis> Imoveis { get; set; }
         public DbSet<Contrato> Contratos { get; set; }
         public DbSet<Receita> Receitas { get; set; }
         public DbSet<Despesa> Despesas { get; set; }
@@ -24,11 +23,52 @@ namespace GerirAluguel.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Imoveis>()
+                .HasKey(i => i.ImovelId);
+
+           
+            modelBuilder.Entity<Caracteristica>()
+                .HasKey(c => c.CaracteristicaId);
+
+            modelBuilder.Entity<Contrato>()
+                .HasKey(c => c.ContratoId);
+
+         
+            modelBuilder.Entity<Inquilino>()
+                .HasKey(i => i.InquilinoId);
+
+            modelBuilder.Entity<Receita>()
+                .HasKey(r => r.ReceitaId);
+
+          
+            modelBuilder.Entity<Despesa>()
+                .HasKey(d => d.DespesaId);
+
+
+          
             modelBuilder.Entity<ImovelCaracteristica>()
-                .HasKey(ic => new { ic.IdImovel, ic.IdCaracteristica });
+                .HasKey(ic => new { ic.ImovelId, ic.CaracteristicaId });
 
             modelBuilder.Entity<ImovelDespesa>()
-                .HasKey(id => new { id.IdImovel, id.IdDespesa });
+                .HasKey(id => new { id.ImovelId, id.DespesaId });
+
+     
+            modelBuilder.Entity<Contrato>()
+                .HasOne(c => c.Inquilino)
+                .WithMany(i => i.Contratos) 
+                .HasForeignKey(c => c.InquilinoId);
+
+      
+            modelBuilder.Entity<Contrato>()
+                .HasOne(c => c.Imovel)
+                .WithMany(i => i.Contrato) 
+                .HasForeignKey(c => c.ImovelId);
+
+           
+            modelBuilder.Entity<Receita>()
+                .HasOne(r => r.Contrato)
+                .WithMany(c => c.Receitas) 
+                .HasForeignKey(r => r.ContratoId); 
         }
     }
 }
