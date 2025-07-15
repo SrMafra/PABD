@@ -13,14 +13,31 @@ namespace GerirAluguel.Services
         {
             _context = context;
         }
-        public async Task<IEnumerable<Contrato>>GetAll()
+        //public async Task<IEnumerable<Contrato>>GetAll()
+       // {
+       //     return await _context.Contratos.ToListAsync();
+       // }
+       public async Task<IEnumerable<Contrato>> GetAll()
         {
-            return await _context.Contratos.ToListAsync();
+            return await _context.Contratos
+                .Include(ct => ct.Inquilino)
+                .Include(ct => ct.Imovel)
+                .Include(ct => ct.Receitas) 
+                .ToListAsync();
         }
+
+
+
+
         public async Task<Contrato?> GetOneById(int id)
         {
-           /*return await _context.Contratos.FindAsync(id);*/
-           return await _context.Contratos.Include(c=>c.InquilinoId).Include(c=>c.ImovelId).FirstOrDefaultAsync(c=>c.ContratoId == id);
+            /*return await _context.Contratos.FindAsync(id);*/
+            //return await _context.Contratos.Include(ct=>ct.InquilinoId).Include(ct=>ct.ImovelId).FirstOrDefaultAsync(ct=>ct.ContratoId == id);
+            return await _context.Contratos
+            .Include(ct => ct.Inquilino)
+            .Include(ct => ct.Imovel)
+            .Include(ct => ct.Receitas) 
+            .FirstOrDefaultAsync(ct => ct.ContratoId == id);
         }
         public async Task<Contrato?> Create(ContratoDto dto)
         {

@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\models\\imovelcaracteristica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:models\\imovelcaracteristica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\models\\imoveis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:models\\imoveis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\controllers\\receitacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:controllers\\receitacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\models\\imoveldespesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:models\\imoveldespesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\models\\imovel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:models\\imovel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\dto\\imoveisdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:dto\\imoveisdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\models\\contrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:models\\contrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\controllers\\imoveiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:controllers\\imoveiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\controllers\\inquilinocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:controllers\\inquilinocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\controllers\\imovelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:controllers\\imovelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|c:\\users\\srmafra-ti\\documents\\pabd\\geriraluguel\\controllers\\contratocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC4C815-9360-4859-AD47-D836DC2DBF47}|GerirAluguel.csproj|solutionrelative:controllers\\contratocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,72 +41,113 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 274,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ImovelDespesa.cs",
-              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\ImovelDespesa.cs",
-              "RelativeDocumentMoniker": "Models\\ImovelDespesa.cs",
-              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\ImovelDespesa.cs",
-              "RelativeToolTip": "Models\\ImovelDespesa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Contrato.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\Contrato.cs",
+              "RelativeDocumentMoniker": "Models\\Contrato.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\Contrato.cs",
+              "RelativeToolTip": "Models\\Contrato.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:27:41.22Z",
+              "WhenOpened": "2025-07-15T00:37:53.388Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ImovelCaracteristica.cs",
-              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\ImovelCaracteristica.cs",
-              "RelativeDocumentMoniker": "Models\\ImovelCaracteristica.cs",
-              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\ImovelCaracteristica.cs",
-              "RelativeToolTip": "Models\\ImovelCaracteristica.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:26:34.965Z",
+              "WhenOpened": "2025-07-01T02:38:44.946Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ImoveisController.cs",
-              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ImoveisController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ImoveisController.cs",
-              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ImoveisController.cs",
-              "RelativeToolTip": "Controllers\\ImoveisController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAAARAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Imovel.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\Imovel.cs",
+              "RelativeDocumentMoniker": "Models\\Imovel.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\Imovel.cs",
+              "RelativeToolTip": "Models\\Imovel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:22:47.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ImoveisDto.cs",
-              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\DTO\\ImoveisDto.cs",
-              "RelativeDocumentMoniker": "DTO\\ImoveisDto.cs",
-              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\DTO\\ImoveisDto.cs",
-              "RelativeToolTip": "DTO\\ImoveisDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:22:30.14Z",
+              "WhenOpened": "2025-07-15T13:16:48.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Imoveis.cs",
-              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\Imoveis.cs",
-              "RelativeDocumentMoniker": "Models\\Imoveis.cs",
-              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Models\\Imoveis.cs",
-              "RelativeToolTip": "Models\\Imoveis.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Title": "ReceitaController.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ReceitaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReceitaController.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ReceitaController.cs",
+              "RelativeToolTip": "Controllers\\ReceitaController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADcAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:21:37.286Z",
+              "WhenOpened": "2025-07-15T13:01:19.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InquilinoController.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\InquilinoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InquilinoController.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\InquilinoController.cs",
+              "RelativeToolTip": "Controllers\\InquilinoController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T12:49:58.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ImovelController.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ImovelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImovelController.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ImovelController.cs",
+              "RelativeToolTip": "Controllers\\ImovelController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T12:57:28.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ContratoController.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ContratoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContratoController.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Controllers\\ContratoController.cs",
+              "RelativeToolTip": "Controllers\\ContratoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T12:49:58.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\SrMafra-TI\\Documents\\PABD\\GerirAluguel\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T02:26:37.987Z",
               "EditorCaption": ""
             }
           ]

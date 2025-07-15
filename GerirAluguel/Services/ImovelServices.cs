@@ -16,31 +16,31 @@ namespace GerirAluguel.Services
         }
 
       
-        public async Task<IEnumerable<ImoveisDto>> GetAll()
+        public async Task<IEnumerable<ImovelDto>> GetAll()
         {
-            var Imovel = await _context.Imoveis.ToListAsync();
+            var Imovel = await _context.Imovel.ToListAsync();
             
-            return Imovel.Select(i => new ImoveisDto
+            return Imovel.Select(im => new ImovelDto
             {
-                ImovelId = i.ImovelId, 
-                DescricaoImovel = i.DescricaoImovel,
-                Endereco = i.Endereco,
-                ValorAluguel = i.ValorAluguel,
-                Status = i.Status
+                ImovelId = im.ImovelId, 
+                DescricaoImovel = im.DescricaoImovel,
+                Endereco = im.Endereco,
+                ValorAluguel = im.ValorAluguel,
+                Status = im.Status
             });
         }
 
  
-        public async Task<ImoveisDto?> GetOneById(int id)
+        public async Task<ImovelDto?> GetOneById(int id)
         {
            
-            var imovel = await _context.Imoveis.FindAsync(id);
+            var imovel = await _context.Imovel.FindAsync(id);
             if (imovel == null)
             {
                 return null;
             }
             
-            return new ImoveisDto
+            return new ImovelDto
             {
                 ImovelId = imovel.ImovelId, 
                 DescricaoImovel = imovel.DescricaoImovel,
@@ -51,10 +51,10 @@ namespace GerirAluguel.Services
         }
 
         
-        public async Task<ImoveisDto> Create(ImoveisDto dto)
+        public async Task<ImovelDto> Create(ImovelDto dto)
         {
            
-            var imovel = new Imoveis
+            var imovel = new Imovel
             {
                
                 DescricaoImovel = dto.DescricaoImovel,
@@ -63,11 +63,11 @@ namespace GerirAluguel.Services
                 Status = dto.Status ?? "DISPONÍVEL", 
             };
 
-            _context.Imoveis.Add(imovel);
+            _context.Imovel.Add(imovel);
             await _context.SaveChangesAsync();
 
             
-            return new ImoveisDto
+            return new ImovelDto
             {
                 ImovelId = imovel.ImovelId,
                 DescricaoImovel = imovel.DescricaoImovel,
@@ -78,9 +78,9 @@ namespace GerirAluguel.Services
         }
 
 
-        public async Task<ImoveisDto?> Update(int id, ImoveisDto dto)
+        public async Task<ImovelDto?> Update(int id, ImovelDto dto)
         {
-            var imovel = await _context.Imoveis.FindAsync(id);
+            var imovel = await _context.Imovel.FindAsync(id);
 
             if (imovel == null)
             {
@@ -96,7 +96,7 @@ namespace GerirAluguel.Services
             await _context.SaveChangesAsync();
 
             
-            return new ImoveisDto
+            return new ImovelDto
             {
                 ImovelId = imovel.ImovelId,
                 DescricaoImovel = imovel.DescricaoImovel,
@@ -109,12 +109,12 @@ namespace GerirAluguel.Services
         
         public async Task<bool> Delete(int id)
         {
-            var imovel = await _context.Imoveis.FindAsync(id);
+            var imovel = await _context.Imovel.FindAsync(id);
 
             if (imovel == null)
                 return false;
 
-            _context.Imoveis.Remove(imovel);
+            _context.Imovel.Remove(imovel);
             await _context.SaveChangesAsync();
             return true;
         }

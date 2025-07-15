@@ -15,11 +15,11 @@ namespace GerirAluguel.Services
         }
         public async Task<IEnumerable<Inquilino>> GetAll()
         {
-            return await _context.Inquilinos.ToListAsync();
+            return await _context.Inquilino.ToListAsync();
         }
         public async Task<Inquilino?> GetOneById(int id)
         {
-            return await _context.Inquilinos.FindAsync(id);
+            return await _context.Inquilino.FindAsync(id);
 
         }
         public async Task<Inquilino?> Create(InquilinoDto dto)
@@ -32,7 +32,7 @@ namespace GerirAluguel.Services
                 Telefone = dto.Telefone
             };
 
-            _context.Inquilinos.Add(inquilino);
+            _context.Inquilino.Add(inquilino);
             await _context.SaveChangesAsync();
 
             return inquilino;
@@ -40,7 +40,7 @@ namespace GerirAluguel.Services
 
         public async Task<Inquilino?> Update(int id, InquilinoDto dto)
         {
-            var inquilino = await _context.Inquilinos.FindAsync(id);
+            var inquilino = await _context.Inquilino.FindAsync(id);
 
             if (inquilino == null)
                 return null;
@@ -56,12 +56,12 @@ namespace GerirAluguel.Services
 
         public async Task<bool> Delete(int id)
         {
-            var inquilino = await _context.Inquilinos.FindAsync(id);
+            var inquilino = await _context.Inquilino.FindAsync(id);
 
             if (inquilino == null)
                 return false;
 
-            _context.Inquilinos.Remove(inquilino);
+            _context.Inquilino.Remove(inquilino);
             await _context.SaveChangesAsync();
             return true;
         }

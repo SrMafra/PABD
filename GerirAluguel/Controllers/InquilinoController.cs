@@ -4,8 +4,8 @@ using GerirAluguel.DTO;
 
 namespace GerirAluguel.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class InquilinoController : ControllerBase
     {
         private readonly InquilinoServices _service;
@@ -23,47 +23,39 @@ namespace GerirAluguel.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetOne(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             var inquilino = await _service.GetOneById(id);
-
-            if (inquilino == null)
-                return NotFound("Inquilino não encontrado");
-
-            return Ok(inquilino);
+            return inquilino is null
+                ? NotFound("Inquilino não encontrado.")
+                : Ok(inquilino);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] InquilinoDto dto)
+        public async Task<IActionResult> Create([FromBody] InquilinoDto dto)
         {
             var inquilino = await _service.Create(dto);
-
-            if (inquilino == null)
-                return Problem("Erro ao criar inquilino");
-
-            return Created("", inquilino);
+            return inquilino is null
+                ? Problem("Erro ao criar inquilino.", statusCode: 500)
+                : CreatedAtAction(nameof(GetById), new { id = inquilino.InquilinoId }, inquilino);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] InquilinoDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] InquilinoDto dto)
         {
             var inquilino = await _service.Update(id, dto);
-
-            if (inquilino == null)
-                return NotFound("Inquilino não encontrado");
-
-            return Ok(inquilino);
+            return inquilino is null
+                ? NotFound("Inquilino não encontrado para atualização.")
+                : Ok(inquilino);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var sucesso = await _service.Delete(id);
-
-            if (!sucesso)
-                return NotFound("Inquilino não encontrado");
-
-            return NoContent();
+            return sucesso
+                ? NoContent()
+                : NotFound("Inquilino não encontrado para exclusão.");
         }
     }
 }

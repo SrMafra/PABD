@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
+    "ContainingType": "GerirAluguel.Controllers.ContratoController",
     "Method": "GetAll",
-    "RelativePath": "api/Imoveis",
+    "RelativePath": "api/Contrato",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,25 +10,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
-    "Method": "Post",
-    "RelativePath": "api/Imoveis",
+    "ContainingType": "GerirAluguel.Controllers.ContratoController",
+    "Method": "Create",
+    "RelativePath": "api/Contrato",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "GerirAluguel.DTO.ImoveisDto",
+        "Type": "GerirAluguel.Dto.ContratoDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
-    "Method": "GetOne",
-    "RelativePath": "api/Imoveis/{id}",
+    "ContainingType": "GerirAluguel.Controllers.ContratoController",
+    "Method": "GetById",
+    "RelativePath": "api/Contrato/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
-    "Method": "Put",
-    "RelativePath": "api/Imoveis/{id}",
+    "ContainingType": "GerirAluguel.Controllers.ContratoController",
+    "Method": "Update",
+    "RelativePath": "api/Contrato/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -56,16 +56,95 @@
       },
       {
         "Name": "dto",
-        "Type": "GerirAluguel.DTO.ImoveisDto",
+        "Type": "GerirAluguel.Dto.ContratoDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerirAluguel.Controllers.ImoveisController",
+    "ContainingType": "GerirAluguel.Controllers.ContratoController",
     "Method": "Delete",
-    "RelativePath": "api/Imoveis/{id}",
+    "RelativePath": "api/Contrato/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "Method": "GetAll",
+    "RelativePath": "api/Imovel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "Method": "Create",
+    "RelativePath": "api/Imovel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GerirAluguel.DTO.ImovelDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "Method": "GetById",
+    "RelativePath": "api/Imovel/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "Method": "Update",
+    "RelativePath": "api/Imovel/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "GerirAluguel.DTO.ImovelDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerirAluguel.Controllers.ImovelController",
+    "Method": "Delete",
+    "RelativePath": "api/Imovel/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -90,7 +169,7 @@
   },
   {
     "ContainingType": "GerirAluguel.Controllers.InquilinoController",
-    "Method": "Post",
+    "Method": "Create",
     "RelativePath": "api/Inquilino",
     "HttpMethod": "POST",
     "IsController": true,
@@ -106,7 +185,7 @@
   },
   {
     "ContainingType": "GerirAluguel.Controllers.InquilinoController",
-    "Method": "GetOne",
+    "Method": "GetById",
     "RelativePath": "api/Inquilino/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -122,7 +201,7 @@
   },
   {
     "ContainingType": "GerirAluguel.Controllers.InquilinoController",
-    "Method": "Put",
+    "Method": "Update",
     "RelativePath": "api/Inquilino/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -145,6 +224,85 @@
     "ContainingType": "GerirAluguel.Controllers.InquilinoController",
     "Method": "Delete",
     "RelativePath": "api/Inquilino/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceitaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Receita",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceitaController",
+    "Method": "Create",
+    "RelativePath": "api/Receita",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GerirAluguel.DTO.ReceitaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceitaController",
+    "Method": "GetById",
+    "RelativePath": "api/Receita/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceitaController",
+    "Method": "Update",
+    "RelativePath": "api/Receita/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "GerirAluguel.DTO.ReceitaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceitaController",
+    "Method": "Delete",
+    "RelativePath": "api/Receita/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

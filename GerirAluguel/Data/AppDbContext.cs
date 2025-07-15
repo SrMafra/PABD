@@ -1,17 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using GerirAluguel.Models;
 
-
 namespace GerirAluguel.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Inquilino> Inquilinos { get; set; }
-        public DbSet<Imoveis> Imoveis { get; set; }
+        public DbSet<Inquilino> Inquilino { get; set; }
+        public DbSet<Imovel> Imovel { get; set; }
         public DbSet<Contrato> Contratos { get; set; }
         public DbSet<Receita> Receitas { get; set; }
         public DbSet<Despesa> Despesas { get; set; }
@@ -23,52 +20,78 @@ namespace GerirAluguel.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Imoveis>()
-                .HasKey(i => i.ImovelId);
+            // Imovel
+            modelBuilder.Entity<Imovel>(entity =>
+            {
+                entity.ToTable("Imovel");
+                entity.HasKey(im => im.ImovelId);
+                entity.Property(im => im.ImovelId).HasColumnName("id").ValueGeneratedOnAdd();
+                entity.Property(im => im.DescricaoImovel).HasColumnName("descricao");
+                entity.Property(im => im.Endereco).HasColumnName("endereco");
+                entity.Property(im => im.ValorAluguel).HasColumnName("valorAluguel").HasColumnType("decimal(10,2)");
+                entity.Property(im => im.Status).HasColumnName("status");
+            });
 
-           
-            modelBuilder.Entity<Caracteristica>()
-                .HasKey(c => c.CaracteristicaId);
+            // Inicio Relacionamentos N:N
+            modelBuilder.Entity<ImovelCaracteristica>().HasKey(ic => new { ic.ImovelId, ic.CaracteristicaId });
+            modelBuilder.Entity<ImovelCaracteristica>().Property(ic => ic.ImovelId).HasColumnName("idImovel");
+            modelBuilder.Entity<ImovelCaracteristica>().Property(ic => ic.CaracteristicaId).HasColumnName("idCaracteristica");
 
-            modelBuilder.Entity<Contrato>()
-                .HasKey(c => c.ContratoId);
+            modelBuilder.Entity<ImovelDespesa>().HasKey(id => new { id.ImovelId, id.DespesaId });
+            modelBuilder.Entity<ImovelDespesa>().Property(id => id.ImovelId).HasColumnName("idImovel");
+            modelBuilder.Entity<ImovelDespesa>().Property(id => id.DespesaId).HasColumnName("idDespesa");
+            // Fim Relacionamento N:N
 
-         
-            modelBuilder.Entity<Inquilino>()
-                .HasKey(i => i.InquilinoId);
+            modelBuilder.Entity<Inquilino>(entity =>
+            {
+                entity.ToTable("Inquilino");
+                entity.HasKey(iq => iq.InquilinoId);
+                entity.Property(iq => iq.InquilinoId).HasColumnName("id").ValueGeneratedOnAdd();
+                entity.Property(iq => iq.Nome).HasColumnName("nome");
+                entity.Property(iq => iq.Cpf).HasColumnName("cpf");
+                entity.Property(iq => iq.Email).HasColumnName("email");
+                entity.Property(iq => iq.Telefone).HasColumnName("telefone");
+            });
 
-            modelBuilder.Entity<Receita>()
-                .HasKey(r => r.ReceitaId);
+            modelBuilder.Entity<Contrato>(entity =>
+            {
+                entity.ToTable("Contrato");
+                entity.HasKey(ct => ct.ContratoId);
+                entity.Property(ct => ct.ContratoId).HasColumnName("id").ValueGeneratedOnAdd();
+                entity.Property(ct => ct.DataInicio).HasColumnName("dataInicio");
+                entity.Property(ct => ct.DataFim).HasColumnName("dataFim");
+                entity.Property(ct => ct.ValorMensal).HasColumnName("valorMensal");
 
-          
-            modelBuilder.Entity<Despesa>()
-                .HasKey(d => d.DespesaId);
+                entity.Property(ct => ct.InquilinoId).HasColumnName("idInquilino");
+                entity.HasOne(ct => ct.Inquilino)
+                      .WithMany(iq => iq.Contratos)
+                      .HasForeignKey(ct => ct.InquilinoId);
+
+                entity.Property(ct => ct.ImovelId).HasColumnName("idImovel");
+                entity.HasOne(ct => ct.Imovel)
+                      .WithMany(im => im.Contratos)
+                      .HasForeignKey(ct => ct.ImovelId);
+
+                entity.HasMany(ct => ct.Receitas)
+                      .WithOne(r => r.Contrato)
+                      .HasForeignKey(r => r.ContratoId);
+            });
 
 
-          
-            modelBuilder.Entity<ImovelCaracteristica>()
-                .HasKey(ic => new { ic.ImovelId, ic.CaracteristicaId });
+            modelBuilder.Entity<Receita>(entity =>
+            {
+                entity.ToTable("Receita");
+                entity.HasKey(r => r.ReceitaId);
+                entity.Property(r => r.ReceitaId).HasColumnName("id").ValueGeneratedOnAdd();
+                entity.Property(r => r.DataPagamento).HasColumnName("dataReferencia");
+                entity.Property(r => r.ValorPagamento).HasColumnName("valor");
+                entity.Property(r => r.Situacao).HasColumnName("situacao");
 
-            modelBuilder.Entity<ImovelDespesa>()
-                .HasKey(id => new { id.ImovelId, id.DespesaId });
-
-     
-            modelBuilder.Entity<Contrato>()
-                .HasOne(c => c.Inquilino)
-                .WithMany(i => i.Contratos) 
-                .HasForeignKey(c => c.InquilinoId);
-
-      
-            modelBuilder.Entity<Contrato>()
-                .HasOne(c => c.Imovel)
-                .WithMany(i => i.Contrato) 
-                .HasForeignKey(c => c.ImovelId);
-
-           
-            modelBuilder.Entity<Receita>()
-                .HasOne(r => r.Contrato)
-                .WithMany(c => c.Receitas) 
-                .HasForeignKey(r => r.ContratoId); 
+                entity.Property(r => r.ContratoId).HasColumnName("idContrato");
+                entity.HasOne(r => r.Contrato)
+                      .WithMany(ct => ct.Receitas)
+                      .HasForeignKey(r => r.ContratoId);
+            });
         }
     }
 }
